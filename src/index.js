@@ -1,13 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import './index.css';
-import App from './App';
+import { RootPage, ErrorPage, DataGridDemoPage } from './routes';
 import reportWebVitals from './reportWebVitals';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "data-grid-demo",
+    element: <DataGridDemoPage />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
