@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import './index.css';
-import { RootPage, ErrorPage, DataGridDemoPage } from './routes';
+import { RootPage, ErrorPage, DataGridDemoPage, BarChartDemoPage } from './routes';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
@@ -15,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "data-grid-demo",
     element: <DataGridDemoPage />,
+  },
+  {
+    path: "bar-chart-demo",
+    element: <BarChartDemoPage />,
   },
 ]);
 
